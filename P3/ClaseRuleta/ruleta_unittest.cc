@@ -214,4 +214,3 @@ TEST(Ruleta, getPremiosCero) {
   EXPECT_EQ(740, (++r.getJugadores().begin())->getDinero());
   EXPECT_EQ(1000360, r.getBanca());
 }
-

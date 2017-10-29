@@ -60,13 +60,15 @@ bool Ruleta::addJugador(Jugador jugador){
 	std::ifstream file(jugador.getDNI() + ".txt");
 		if(file){
 			file.close();
+			jugadores_.push_back(jugador);
+			return true;
 		}
 		else{
 			file.open(jugador.getDNI() + ".txt");
 			file.close();
+			jugadores_.push_back(jugador);
+			return true;
 		}
-	jugadores_.push_back(jugador);
-	return true;
 }
 void Ruleta::giraRuleta(){
 	bola_=rand()%(37);
