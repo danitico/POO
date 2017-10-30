@@ -8,6 +8,12 @@ class Crupier : public Persona{
 		Crupier(std::string dni, std::string codigo, std::string nombre="", std::string apellidos="", std::string direccion="", std::string localidad="", std::string provincia="", std::string pais="") : Persona(dni, nombre, apellidos, direccion, localidad, provincia, pais){
 			codigo_=codigo;
 		}
+		/*
+		 *	PROC getCodigo() DEV (string codigo_)
+		 *	REQUIERE True
+		 *	MODIFICA 0
+		 *	EFECTOS 
+		 */
 		std::string getCodigo(){
 			return codigo_;
 		}
