@@ -129,5 +129,6 @@ class Ruleta{
 		 *			  dinero al dinero personal del jugador y a la banca. 
 		 */		
 		void getPremios();
+		void getEstadoRuleta(int &nj, int &suma, int &n, int &beneficio);
 };
 #endif
