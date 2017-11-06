@@ -32,23 +32,6 @@ bool Ruleta::setBola(int numero){
 bool Ruleta::addJugador(Jugador jugador){
 	std::list<Jugador>::iterator i;
 	
-	/*i=std::find(jugadores_.begin(), jugadores_.end(), jugador);
-	
-	if(i!=jugadores_.end() && i->getDNI()==jugador.getDNI()){
-		return false;
-	}
-	else{
-		//comprobar s iexiste
-		
-		if(std::experimental::filesystem::exists(jugador.getDNI() + ".txt")==false){
-			std::ifstream file;
-			file.open(jugador.getDNI() + ".txt");
-			file.close();
-		}
-	}
-	return true;
-	*/
-	
 	i=std::begin(jugadores_);
 	
 	for(; i!=jugadores_.end(); i++){
