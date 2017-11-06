@@ -3,6 +3,12 @@
 #include "persona.h"
 #include "crupier.h"
 #include "jugador.h"
+/*
+ * TAD Ruleta
+ * DESCRIPCIÓN El TAD Ruleta representa la información
+ * y datos relacionados con una ruleta francesa
+ * OPERACIONES 
+ */
 class Ruleta{
 	private:
 		int banca_, bola_;
