@@ -26,6 +26,7 @@ bool Ruleta::setBola(int numero){
 	}
 	else{
 		bola_=numero;
+		n_++;
 		return true;
 	}
 }
@@ -55,6 +56,7 @@ bool Ruleta::addJugador(Jugador jugador){
 }
 void Ruleta::giraRuleta(){
 	bola_=rand()%(37);
+	n_++;
 }
 int Ruleta::deleteJugador(std::string DNI){
 	std::list<Jugador>::iterator i;
@@ -245,4 +247,23 @@ void Ruleta::getPremios(){
 			}
 	   }	
 	}
+}
+void getEstadoRuleta(int &nj, int &suma, int &n, int &beneficio){
+	std::list<Jugador>::iterator i=std::begin(jugadores_);
+	suma=0;
+	n=n_;
+	
+	for(; i!=jugadores_.end(); i++){
+		nj++;
+		i->setApuestas();
+		apuesta=i->getApuestas();
+		
+		std::list<Apuesta>::iterator j=std::begin(apuesta);
+
+		for(; j!=apuesta.end(); j++){
+			suma+=j->cantidad;
+		}
+	}
+
+	beneficio=getBanca() - 1000000;
 }
