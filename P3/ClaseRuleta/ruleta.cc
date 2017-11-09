@@ -246,3 +246,4 @@ void Ruleta::getPremios(){
 	   }	
 	}
 }
+void getEstadoRuleta(int &nj, int &suma, int &n, int &beneficio);
