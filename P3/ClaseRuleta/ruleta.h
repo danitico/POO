@@ -14,6 +14,7 @@ class Ruleta{
 		int banca_, bola_;
 		std::list<Jugador> jugadores_;
 		Crupier crupier_{"ejemplo", "ejemplo"};
+		int n_;
 	public:
 		Ruleta(Crupier crupier);//
 		/*
