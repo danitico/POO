@@ -1,8 +1,10 @@
 #ifndef CONTADOR_H
 #define CONTADOR_H
+#include <list>
 class Contador{
 	private:
-		int n_, min_, max_;
+		int n_, min_, max_, modificado_;
+		std::list<int> undos;		
 	public:
 		int get();
 		int getMin();
@@ -16,8 +18,8 @@ class Contador{
 		Contador operator--(int);
 		Contador operator+(const int a);
 		Contador operator-(const int a);
-		bool undo(int n);
+		friend Contador operator+(int a, Contador c);
+		friend Contador operator-(int a, Contador c);
+		bool undo(int n=1);
 };
-friend Contador operator+(Contador c);
-friend Contador operator-(Contador c);
 #endif
