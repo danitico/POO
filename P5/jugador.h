@@ -1,6 +1,7 @@
 #ifndef JUGADOR_H
 #define JUGADOR_H
 #include "persona.h"
+#include <list>
 struct Apuesta{
 	int tipo;
 	std::string valor;
