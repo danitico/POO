@@ -1,5 +1,8 @@
 #include <cstdlib>
+#include <iostream>
 #include <ctime>
+#include <istream>
+#include <ostream>
 #include "dados.h"
 Dados::Dados(){	
 	d1_=1; 
@@ -113,17 +116,15 @@ std::ostream& operator<<(std::ostream &stream, const Dados &a){
 std::istream& operator>>(std::istream &stream, Dados &a){
 	bool b=false;
 	while(b==false){
-		cout<<"Introduzca dado 1\n";
+		std::cout<<"Introduzca dado 1\n";
 		stream>>a.d1_;
-
-		if(!(a.d1_<1 || a.d1_>6)){b=true;}
+		b=a.setDado1(a.d1_);
 	}
 	bool c=false;
 	while(c==false){
-		cout<<"Introduzca dado 2\n";
+		std::cout<<"Introduzca dado 2\n";
 		stream>>a.d2_;
-
-		if(!(a.d2_<1 || a.d2_>6)){c=true;}
+		c=a.setDado2(a.d2_);
 	}
 	return stream;
 }
